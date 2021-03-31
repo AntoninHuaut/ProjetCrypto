@@ -64,8 +64,6 @@ def xorGlobal(nb):
     resBits = []
 
     for i in range(0, nb):
-        
-
         bLsfr1 = getBitIndice(lsfr1, 8, lsfr1_longueur)
         bLsfr2 = getBitIndice(lsfr2, 10, lsfr2_longueur)
         bLsfr3 = getBitIndice(lsfr3, 10, lsfr3_longueur)
@@ -81,6 +79,7 @@ def xorGlobal(nb):
 
     return resBits
 
+
 def initXorRegistres(array):
     firstVal = int(array[0], 2)
     newVals = ""
@@ -93,6 +92,7 @@ def initXorRegistres(array):
     xorLSFR3(True)
 
     return newVals
+
 
 def initRegistre(key):
     global lsfr1, lsfr2, lsfr3
