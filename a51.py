@@ -57,7 +57,7 @@ def xorLSFR3(hasDecalage):
 
 
 def getMajoriteBitOrange(bLsfr1, bLsfr2, bLsfr3):
-    return bLsfr1 + bLsfr2 + bLsfr3 > 1
+    return 1 if bLsfr1 + bLsfr2 + bLsfr3 > 1 else 0
 
 
 def xorGlobal(nb):
@@ -69,9 +69,9 @@ def xorGlobal(nb):
         bLsfr3 = getBitIndice(lsfr3, 10, lsfr3_longueur)
         majorite = getMajoriteBitOrange(bLsfr1, bLsfr2, bLsfr3)
 
-        b1 = xorLSFR1(bLsfr1 != majorite)
-        b2 = xorLSFR2(bLsfr2 != majorite)
-        b3 = xorLSFR3(bLsfr3 != majorite)
+        b1 = xorLSFR1(bLsfr1 == majorite)
+        b2 = xorLSFR2(bLsfr2 == majorite)
+        b3 = xorLSFR3(bLsfr3 == majorite)
 
         res = (1 if b1 else 0) + (1 if b2 else 0) + (1 if b3 else 0) == 1
         b = 1 if res else 0
@@ -107,7 +107,7 @@ def affichageRegistre(registre, longueur):
 
 
 def getBitIndice(numberValue, index, longueur):
-    return int(format(numberValue, 'b').zfill(longueur)[longueur - (index + 1)]) == 1
+    return int(format(numberValue, 'b').zfill(longueur)[longueur - (index + 1)])
 
 
 def getLettreBinaire(lettre):
