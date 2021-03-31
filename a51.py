@@ -88,6 +88,10 @@ def initXorRegistres(array):
     for i in range(0, len(array)):
         newVals += str(int(array[i], 2) ^ firstVal)
 
+    xorLSFR1(True)
+    xorLSFR2(True)
+    xorLSFR3(True)
+
     return newVals
 
 def initRegistre(key):
