@@ -95,19 +95,3 @@ def generate_key():
     _p = generate_prime(k, precision)
     _g = generateur(_p)
     return _p, _g
-
-
-p, g = generate_key()
-
-aliceSecretNb = randint(1, p - 1)
-A = square_and_multiply(g, aliceSecretNb, p)
-
-bobSecretNb = randint(1, p - 1)
-B = square_and_multiply(g, bobSecretNb, p)
-
-aliceSecretKey = square_and_multiply(B, aliceSecretNb, p)
-bobSecretKey = square_and_multiply(A, bobSecretNb, p)
-
-print(aliceSecretKey == bobSecretKey)
-
-# TODO utiliser A51 pour échanger A et B
