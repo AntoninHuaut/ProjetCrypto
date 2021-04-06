@@ -32,3 +32,10 @@ Elle fonctionnait sur des nombres p premiers petits mais pas sur un nombre premi
 Nous avons tenté une implémentation qui fait qu'on prend un nombre aléatoire entre 2 et 256 bits (car p = 512 bits) 
 et qui vérifie si le pgcd de ce nombre et de p est égal à 1.  
 Si c'est le cas, ce nombre est choisi comme générateur.
+
+## Lancer le programme
+*(Le programme nécessite Python3 d'installé)*  
+Pour lancer le programme de test, tapez la commande :  
+`py test_diffiehellman.py` *(En utilisant le Python launcher pour Windows)*  
+**OU**  
+`python3 test_diffiehellman.py`
