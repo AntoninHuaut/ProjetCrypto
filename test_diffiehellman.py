@@ -26,11 +26,11 @@ if secretKey != secretKeyPrime:
     raise AssertionError("Le secret est différent")
 
 secretKey = str(bin(secretKey))
-a51Key = secretKey[2:66] # On extrait 64 bits après le 0b
+a51Key = secretKey[2:66]  # On extrait 64 bits après le 0b
 
 # Bob peut maintenant envoyer un message chiffré à Alice, qui sera capable de la déchiffrer
 
-# Initialisation de a51 avec la clé secrète
+# Initialisation de A5/1 avec la clé secrète
 initRegistre(a51Key)
 
 print("Envoie d'un message par Bob :")
@@ -39,6 +39,6 @@ messageChiffree = chiffrerMessage(message)
 print("Bob envoie le message :", messageChiffree, " (correspondant à '" + message + "')")
 
 print("\nAlice recoit :", messageChiffree)
-# Initialisation de a51 avec la clé secrète du coté de Alice
+# Initialisation de A5/1 avec la clé secrète du coté de Alice
 initRegistre(a51Key)
 print("Alice le déchiffre en :", dechifferMessage(messageChiffree))

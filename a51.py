@@ -90,7 +90,7 @@ def xorGlobal(nb):
     """
     resBits = []
 
-    for i in range(0, nb):
+    for i in range(0, nb):  # Compteur
         bLsfr1 = getBitIndice(lsfr1, 8, lsfr1_longueur)
         bLsfr2 = getBitIndice(lsfr2, 10, lsfr2_longueur)
         bLsfr3 = getBitIndice(lsfr3, 10, lsfr3_longueur)
